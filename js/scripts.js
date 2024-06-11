@@ -79,3 +79,40 @@ if (folder && markdownFile) {
     listMarkdownFiles('portofolio', 'daftar-portofolio', true);
   }
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.getElementById('contact-form');
+  const resultDiv = document.getElementById('form-result');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const formData = new FormData(form);
+    const jsonData = {};
+    formData.forEach((value, key) => {
+      jsonData[key] = value;
+    });
+
+    fetch('https://hook.eu2.make.com/yd69n10993422m0itz8r1zihc3geftm2', {
+      method: 'POST',
+      body: JSON.stringify(jsonData),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    .then(response => {
+      if (response.ok) {
+        resultDiv.innerHTML = '<p>Pesan sudah dikirim...</p>';
+        resultDiv.style.color = 'green';
+        form.reset();
+      } else {
+        resultDiv.innerHTML = '<p>Terjadi kesalahan, coba lagi.</p>';
+        resultDiv.style.color = 'red';
+      }
+    })
+    .catch(error => {
+      resultDiv.innerHTML = '<p>Terjadi kesalahan, coba lagi.</p>';
+      resultDiv.style.color = 'red';
+    });
+  });
+});
