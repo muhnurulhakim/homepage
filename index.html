@@ -4,125 +4,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Halaman Web Pribadi Muhammad Nurul Hakim</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-    }
-    section {
-      padding: 20px;
-    }
-    #beranda {
-      background-color: #f0f0f0;
-      text-align: center;
-      padding: 40px 20px;
-    }
-    #tentang-saya, #portofolio, #blog, #kontak {
-      margin: 20px;
-    }
-    .karya {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-    .karya img {
-      max-width: 100%;
-      height: auto;
-      max-height: 400px; /* Menetapkan tinggi maksimum */
-      display: block; /* Menghapus jarak bawah default pada gambar */
-      margin: 0 auto; /* Menyesuaikan posisi gambar secara horizontal */
-      object-fit: cover; /* Menyesuaikan gambar agar tetap proporsional */
-    }
-    @media (max-width: 768px) {
-      .karya img {
-        flex: 1 1 100%;
-      }
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-    }
-    form label {
-      margin: 10px 0 5px;
-    }
-    form input, form textarea {
-      padding: 10px;
-      margin-bottom: 10px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-    form button {
-      padding: 10px;
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      font-weight: bold; /* Membuat teks tombol menjadi tebal */
-    }
-    form button:hover {
-      background-color: #45a049;
-    }
-    .portfolio-item {
-      margin-bottom: 20px;
-    }
-    .portfolio-item p {
-      text-align: justify;
-    }
-    .portfolio-item a {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 20px;
-      background-color: #4CAF50;
-      color: white;
-      text-decoration: none;
-      border-radius: 4px;
-      text-align: center;
-    }
-    .portfolio-item a:hover {
-      background-color: #45a049;
-    }
-  </style>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
   <section id="beranda">
-    <h1>Selamat Datang di Halaman Web Pribadi Muhammad Nurul Hakim</h1>
-    <p>Digital Creator | Pengusaha Kreatif | AI Enthusiast</p>
+    <h1>Welcome to Muhammad Nurul Hakim's Website</h1>
+    <p>Digital Creator | Storyteller | AI Enthusiast</p>
   </section>
 
   <section id="tentang-saya">
     <h2>Tentang Saya</h2>
-    <p>Saya adalah Muhammad Nurul Hakim, seorang Digital Creator yang ahli dalam teknologi. Saya menggunakan Notion, Canva, dan AI untuk membantu pengusaha pemula dalam merintis bisnis mereka.</p>
+    <p>Saya adalah Muhammad Nurul Hakim, seorang Digital Creator yang sangat antusias mempelajari No-Code Tools, SaaS, bisnis, dan storytelling. Saya menggunakan Notion, Canva, dan AI untuk membantu pengusaha pemula dalam merintis bisnis mereka.</p>
   </section>
 
   <section id="portofolio">
-    <h2>Portofolio</h2>
-    <div class="karya portfolio-item">
-      <img src="gambar1.png" alt="Karya 1">
-      <p>Ini adalah produk digital yang pertama kali saya launch.</p>
-      <a href="portofolio1.html">Lihat Selengkapnya</a>
-    </div>
-    <div class="karya portfolio-item">
-      <img src="gambar2.png" alt="Karya 2">
-      <p>Ini adalah contoh prompt yang saya buat sebagai bahan praktik dari kelas online di atas.</p>
-      <a href="portofolio2.html">Lihat Selengkapnya</a>
+    <h2>Produk Terbaru!</h2>
+    <div id="daftar-portofolio" class="grid-container">
+      <!-- Daftar portofolio akan dimuat di sini -->
     </div>
   </section>
 
-  <section id="blog">
+  <!-- <section id="blog">
     <h2>Blog</h2>
-    <article>
-      <h3>Seluk-beluk Produk Digital</h3>
-      <p>Apa yang terjadi kalo ini adalah sebuah artikel panjang super lengkap tentang produk digital. Dengan membaca artikel ini, maka kamu bisa mengerti apa itu produk digital, lalu kamu bisa membuat produk digital versi kamu, pada akhirnya kamu bisa menghasilkan uang dari produk digital buatan kamu. Seru? Yuk simak artikel ini dari awal sampai habis.</p>
-      <a href="blog-artikel.html">Baca Selengkapnya</a>
-    </article>
+    <div id="daftar-blog" class="list-container">
+      <!-- Daftar artikel blog akan dimuat di sini -->
+    </div>
   </section>
 
   <section id="kontak">
     <h2>Kontak</h2>
+    <p>Jika ingin bertanya atau berkonsultasi ringan, silakan hubungi saya dengan mengisi form berikut:</p>
     <form>
       <label for="nama">Nama:</label>
       <input type="text" id="nama" name="nama">
@@ -134,5 +46,6 @@
     </form>
   </section>
 
+  <script src="js/scripts.js"></script>
 </body>
 </html>
