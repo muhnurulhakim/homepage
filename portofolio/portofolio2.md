@@ -1,4 +1,4 @@
-# Karya 2
+## Karya 2
 
 ![Karya 2](images/gambar2.png)
 
@@ -9,5 +9,5 @@ Dari situ pula, ada peluang untuk monetisasi dari hasil gambar kreasi AI. Bentuk
 Termasuk untuk produk digital yang bisa memanfaatkan gambar hasil kreasi AI adalah bikin cerita anak, bikin template produktifitas dengan aneka gambar lucu sebagai pelengkap, dan masih banyak potensi produk lainnya.
 
 <div class="cta-container">
-    <a href="https://muhnurulhakim.myr.id/pl/kelas-online-rahasia-kreasi-konten-ai-tanpa-batas-untuk-pemula" class="cta-button">BELI SEKARANG</a>
+    <a href="https://muhnurulhakim.myr.id/pl/kelas-online-rahasia-kreasi-konten-ai-tanpa-batas-untuk-pemula" class="cta-button">Beli Sekarang</a>
 </div>

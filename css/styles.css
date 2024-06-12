@@ -7,7 +7,7 @@
 
 /* Typography */
 body {
-  font-family: Arial, sans-serif;
+  font-family: Poppins, sans-serif;
   line-height: 1.6;
 }
 
@@ -20,7 +20,8 @@ section {
 header {
   background: #30313D;
   color: white;
-  padding: .5rem 0;
+  padding-top: 0rem;
+  padding-bottom: 0.5rem;
   position: sticky;
   width: 100%;
   top: 0;
@@ -79,8 +80,9 @@ header {
     bottom: 0;
     width: 100%;
     padding-top: 6rem;
+    padding-right: 1rem;
     align-items: center;
-    text-align: center;
+    text-align: right;
     background-color: #30313D;
     color: white;
     transition: right 0.3s ease-in-out;
@@ -93,10 +95,10 @@ header {
 
 /* Home Section */
 #beranda {
-  background-color: #30313D;
+  background-color: #fff;
   text-align: center;
-  color: blanchedalmond;
-  padding: 40px 20px;
+  color: #30313D;
+  padding: 20px 20px;
 }
 
 /* Other Sections */
@@ -112,7 +114,7 @@ header {
 .form-container {
   max-width: 600px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 30px;
   text-align: left;
   background-color: #f9f9f9;
   border-radius: 10px;
@@ -176,7 +178,8 @@ a {
 }
 
 a:hover {
-  background-color: #ffffff;
+  background-color: #fff;
+  color: #30313D;
 }
 
 /* Call to Action Button */
@@ -192,13 +195,14 @@ a:hover {
   color: white;
   text-decoration: none;
   border-radius: 25px;
-  font-size: 18px;
+  font-size: 15px;
   text-align: center;
   font-weight: bold;
 }
 
 .cta-button:hover {
   background-color: #45a049;
+  color: #fff;
 }
 
 /* Form Styles */
@@ -223,6 +227,7 @@ form button {
   background-color: #4CAF50;
   color: white;
   border: none;
+  font-weight: bold;
   border-radius: 4px;
   cursor: pointer;
 }
@@ -316,7 +321,7 @@ ul {
 .markdown-content {
   max-width: 800px;
   margin: auto;
-  padding: 20px;
+  padding: 25px;
   line-height: 1.6;
   font-size: 1.1rem;
   background-color: #fff; /* Add background color */
@@ -336,15 +341,33 @@ ul {
 }
 
 .markdown-content img {
-  max-width: 100%;
+  max-width: 75%;
   height: auto;
   border-radius: 4px;
 }
 
-.markdown-content ul,
-.markdown-content ol {
+/* Perbaikan untuk list bullet dalam konten markdown */
+.markdown-content ul {
+  list-style: disc; /* Pastikan ul menggunakan list-style disc */
   margin-top: 1rem;
-  padding-left: 1.5rem;
+  padding-left: 2.5rem;
+}
+
+.markdown-content ol {
+  list-style: decimal; /* Pastikan ol menggunakan list-style decimal */
+  margin-top: 1rem;
+  padding-left: 2.5rem;
+}
+
+.markdown-content ul ul,
+.markdown-content ol ul,
+.markdown-content ul ol,
+.markdown-content ol ol {
+  list-style-type: circle; /* Nested list bullets */
+}
+
+.markdown-content li {
+  margin-bottom: 0.5rem;
 }
 
 .markdown-content blockquote {

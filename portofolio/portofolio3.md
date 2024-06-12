@@ -1,14 +1,14 @@
-# Kelas Online: Rahasia Kreasi Konten AI Tanpa Batas untuk Pemula
+## Kelas Online: Rahasia Kreasi Konten AI Tanpa Batas untuk Pemula
 
-![Karya 1](images/gambar1.png)
+![Karya 3](images/gambar3.jpeg)
 
-**Perkembangan AI beberapa tahun terakhir begitu masif.**
+### Perkembangan AI beberapa tahun terakhir begitu masif.
 
 Salah satu yang menarik perhatian adalah AI yang bisa membuat gambar berdasarkan prompt tertentu.
 
 Gambar hasil bikinan AI digunakan oleh sebagian kreator konten untuk melengkapi konten, atau menjadi bagian utama dari konten mereka.
 
-**Lalu, kata bertanya semisal "apa manfaatnya buat saya?"**
+### Lalu, kata bertanya semisal "apa manfaatnya buat saya?"
 
 Kalo kamu seorang kreator konten pemula dan pemalu (malu nampilin muka), maka ini daftar manfaat yang akan kamu dapatkan:
 
@@ -22,13 +22,13 @@ Kalo kamu seorang kreator konten pemula dan pemalu (malu nampilin muka), maka in
 
 Jadi, kamu nggak perlu buang-buang waktu untuk membuat sebuah ilustrasi. Kamu bisa segera posting konten promosi, konten edukasi atau konten hiburan kamu.
 
-**Bagaimana cara belajarnya?**
+### Bagaimana cara belajarnya?
 
 Peserta kelas akan mendapatkan link akses ke seluruh materi setelah membayar sesuai invoice. Cara mengakses link materi adalah menggunakan smartphone atau desktop dengan spek minimum, asalkan terkoneksi dengan sinyal internet.
 
 Silakan pelajari seluruh materi secara runut, dimana pun dan kapan pun.
 
-**Berapa investasinya?**
+### Berapa investasinya?
 
 <s>Rp 199.000</s> (Harga Normal)
 
@@ -46,5 +46,5 @@ Khusus untuk peserta kelas ini di masa **PROMO**, kamu berhak mendapatkan akses:
 Selama masa **PROMO**, kamu berhak mendapatkan keduanya secara **GRATIS!**
 
 <div class="cta-container">
-    <a href="https://muhnurulhakim.myr.id/pl/kelas-online-rahasia-kreasi-konten-ai-tanpa-batas-untuk-pemula" class="cta-button">BELI SEKARANG</a>
+    <a href="https://muhnurulhakim.myr.id/pl/kelas-online-rahasia-kreasi-konten-ai-tanpa-batas-untuk-pemula" class="cta-button">Beli Sekarang</a>
 </div>
