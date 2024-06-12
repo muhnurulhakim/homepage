@@ -14,7 +14,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 /* Sections */
@@ -113,7 +113,14 @@ header {
 }
 
 #kontak {
-  text-align: center;
+  text-align: left;
+  display: flex;
+  justify-content: center;
+}
+
+.kontak-container {
+  max-width: 600px;
+  width: 100%;
 }
 
 /* Form Container */
@@ -228,9 +235,14 @@ form input, form textarea {
   border-radius: 4px;
 }
 
+form textarea {
+  resize: vertical;
+}
+
 form button {
   padding: 10px;
   background-color: #4CAF50;
+  margin-top: 10px;
   color: white;
   border: none;
   font-weight: bold;
