@@ -51,7 +51,7 @@ header {
   cursor: pointer;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   .nav-container .logo {
     font-size: 1.2rem;
     z-index: 2;
@@ -306,9 +306,9 @@ ul {
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   .card, .list-item {
-    flex: 1 1 calc(100% - 20px); /* Maintain 2 cards per row in smaller mobile view */
+    flex: 1 1 calc(100% - 20px); /* Menampilkan 1 produk per baris di mobile view */
   }
 }
 
