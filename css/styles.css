@@ -1,181 +1,369 @@
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Typography */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-  }
-  
-  section {
-    padding: 20px;
-  }
-  
-  #beranda {
-    background-color: #30313D;
-    text-align: center; color: blanchedalmond;
-    padding: 40px 20px;
-  }
-  
-  #tentang-saya, #portofolio, #blog, #kontak {
-    margin: 30px;
-  }
-  
-  #kontak {
-    text-align: center;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Sections */
+section {
+  padding: 20px;
+}
+
+/* Navigation */
+header {
+  background: #30313D;
+  color: white;
+  padding: .5rem 0;
+  position: sticky;
+  width: 100%;
+  top: 0;
+  z-index: 9999;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.nav-container .logo {
+  font-size: 2rem; 
+  font-weight: bold;  
+}
+
+.nav, .nav--ul__one, .nav--ul__two {
+  display: flex;
+  gap: 1.6rem;
+  font-size: 1.2rem;
+}
+
+.hamburger-menu {
+  display: none;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .nav-container .logo {
+    font-size: 1.2rem;
+    z-index: 2;
   }
 
-  .form-container {
-    max-width: 600px; /* Maksimal lebar form */
-    margin: 0 auto; /* Menempatkan form di tengah */
-    padding: 20px;
-    text-align: left;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  .nav {
+    flex-direction: column;
+    gap: 2rem;
   }
 
-  .grid-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-  
-  .list-container {
-    display: flex;
+  .nav--ul__one, .nav--ul__two {
     flex-direction: column;
-    gap: 20px;
+    gap: .6rem;
   }
-  
-  .card, .list-item {
-    flex: 1 1 calc(33.333% - 40px);
-    box-sizing: border-box;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
-  }
-  
-  .card:hover, .list-item:hover {
-    transform: scale(1.05);
-  }
-  
-  .card img, .list-item img {
-    width: 100%;
-    height: auto;
-    max-height: 200px;
-    object-fit: cover;
-    border-radius: 4px;
-  }
-  
-  .card h3, .list-item h3 {
-    margin-top: 10px;
-  }
-  
-  .card p, .list-item p {
-    margin-top: 10px;
-  }
-  
-  .card a, .list-item a {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    text-decoration: none;
-    border-radius: 4px;
-  }
-  
-  .card a:hover, .list-item a:hover {
-    background-color: #45a049;
-  }
-  
-  @media (max-width: 768px) {
-    .card, .list-item {
-      flex: 1 1 100%;
-    }
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  form label {
-    margin: 10px 0 5px;
-  }
-  
-  form input, form textarea {
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  form button {
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  form button:hover {
-    background-color: #45a049;
-  }
-  
-  .container {
-    padding: 20px;
-    max-width: 800px;
-    margin: auto;
-  }
-  
-  h1 {
-    text-align: center;
-  }
-  
-  img {
-    max-width: 100%;
-    height: auto;
+
+  .hamburger-menu {
     display: block;
-    margin: 0 auto;
-    object-fit: cover;
+    z-index: 2;
   }
-  
-  a {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    text-decoration: none;
-    border-radius: 4px;
-    text-align: center;
-  }
-  
-  a:hover {
-    background-color: #45a049;
-  }
-  
-  .cta-container {
-    display: flex;
-    justify-content: center;
+
+  .nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    bottom: 0;
+    width: 100%;
+    padding-top: 6rem;
     align-items: center;
-  }
-  
-  .cta-button {
-    padding: 15px 30px;
-    background-color: #4CAF50;
-    color: white;
-    text-decoration: none;
-    border-radius: 25px;
-    font-size: 18px;
     text-align: center;
-    font-weight: bold; /* Membuat tulisan menjadi bold */
+    background-color: #30313D;
+    color: white;
+    transition: right 0.3s ease-in-out;
   }
-  
-  .cta-button:hover {
-    background-color: #45a049;
+
+  .nav.active {
+    right: 0;
   }
-  
-  
+}
+
+/* Home Section */
+#beranda {
+  background-color: #30313D;
+  text-align: center;
+  color: blanchedalmond;
+  padding: 40px 20px;
+}
+
+/* Other Sections */
+#tentang-saya, #portofolio, #blog, #kontak {
+  margin: 30px;
+}
+
+#kontak {
+  text-align: center;
+}
+
+/* Form Container */
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: left;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Grid Container */
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* List Container */
+.list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Card */
+.card, .list-item {
+  flex: 1 1 calc(33.333% - 40px);
+  box-sizing: border-box;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.card:hover, .list-item:hover {
+  transform: scale(1.05);
+}
+
+.card img, .list-item img {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.card h3, .list-item h3 {
+  margin-top: 10px;
+}
+
+.card p, .list-item p {
+  margin-top: 10px;
+}
+
+/* Link Styles */
+a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  text-align: center;
+}
+
+a:hover {
+  background-color: #ffffff;
+}
+
+/* Call to Action Button */
+.cta-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cta-button {
+  padding: 15px 30px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-size: 18px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.cta-button:hover {
+  background-color: #45a049;
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin: 10px 0 5px;
+}
+
+form input, form textarea {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form button {
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #45a049;
+}
+
+/* Container */
+.container {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* Heading */
+h1 {
+  text-align: center;
+}
+
+/* Image */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+/* Unordered List */
+ul {
+  list-style: none;
+}
+
+/* Grid Container */
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+/* Card */
+.card, .list-item {
+  flex: 1 1 calc(25% - 20px); /* 4 cards per row in desktop view */
+  box-sizing: border-box;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  background-color: #fff; /* Add background color */
+  text-align: center; /* Center align text */
+}
+
+.card:hover, .list-item:hover {
+  transform: scale(1.05);
+}
+
+.card img, .list-item img {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.card h3, .list-item h3 {
+  margin-top: 10px;
+  font-size: 1.2rem; /* Increase font size */
+  color: #333; /* Change text color */
+}
+
+.card p, .list-item p {
+  display: none; /* Hide paragraph */
+}
+
+@media (max-width: 1024px) {
+  .card, .list-item {
+    flex: 1 1 calc(50% - 20px); /* 2 cards per row in mobile view */
+  }
+}
+
+@media (max-width: 700px) {
+  .card, .list-item {
+    flex: 1 1 calc(50% - 20px); /* Maintain 2 cards per row in smaller mobile view */
+  }
+}
+
+/* Markdown Styling */
+.markdown-content {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  line-height: 1.6;
+  font-size: 1.1rem;
+  background-color: #f9f9f9; /* Add background color */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3 {
+  margin-top: 1.5rem;
+  color: #333;
+}
+
+.markdown-content p {
+  margin-top: 1rem;
+}
+
+.markdown-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.markdown-content ul,
+.markdown-content ol {
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+}
+
+.markdown-content blockquote {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background-color: #f0f0f0;
+  border-left: 5px solid #ccc;
+}
+
+.markdown-content code {
+  background-color: #f4f4f4;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+.markdown-content pre {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 4px;
+  overflow-x: auto;
+}
