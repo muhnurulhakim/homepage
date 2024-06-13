@@ -226,6 +226,7 @@ form {
 
 form label {
   margin: 10px 0 5px;
+  font-size: 1rem;
 }
 
 form input, form textarea {
@@ -243,11 +244,13 @@ form button {
   padding: 10px;
   background-color: #4CAF50;
   margin-top: 10px;
+  margin-bottom: 10px;
   color: white;
   border: none;
   font-weight: bold;
   border-radius: 4px;
   cursor: pointer;
+  font-size: 1rem;
 }
 
 form button:hover {
