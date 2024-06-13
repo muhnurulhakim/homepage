@@ -136,3 +136,38 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+  fetch('index.json')
+    .then(response => response.json())
+    .then(data => {
+      const portfolioContainer = document.getElementById('daftar-portofolio');
+      data.forEach(item => {
+        const portfolioItem = document.createElement('div');
+        portfolioItem.classList.add('portfolio-item');
+        
+        fetch(`${item.name}.md`)
+          .then(response => response.text())
+          .then(markdown => {
+            // Render markdown to HTML
+            const htmlContent = marked(markdown);
+            
+            // Create a temporary div to manipulate HTML
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = htmlContent;
+
+            // Add lazy loading to images
+            const images = tempDiv.querySelectorAll('img');
+            images.forEach(img => {
+              img.setAttribute('loading', 'lazy');
+            });
+
+            // Add the content to the portfolio item
+            portfolioItem.innerHTML = tempDiv.innerHTML;
+            portfolioContainer.appendChild(portfolioItem);
+          })
+          .catch(error => console.error('Error loading markdown:', error));
+      });
+    })
+    .catch(error => console.error('Error loading portfolio:', error));
+});
